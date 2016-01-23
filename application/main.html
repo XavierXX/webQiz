@@ -20,6 +20,7 @@ h1,h2,h3 {
 
 <script type="text/javascript">
 var index = 1;
+var problemIndex = 1;
 function allowDrop(ev)
 {
 	ev.preventDefault();
@@ -36,10 +37,11 @@ function drop(ev)
 	var data=ev.dataTransfer.getData("Text");
 	var newElement = document.createElement('div');
 	newElement.setAttribute('id', data+'_new'+index);
-	index = index + 1;
 	newElement.setAttribute('draggable', 'true'); 
 	newElement.setAttribute('ondragstart', 'drag(event)');
-	newElement.innerHTML = document.getElementById(data).innerHTML; 
+	newElement.innerHTML = document.getElementById(data).innerHTML.replace('group1','group'+problemIndex);
+	problemIndex = problemIndex + 1; 
+	index = index + 1;
 	ev.target.appendChild(newElement);
 	//ev.target.appendChild(document.getElementById(data));
 }
@@ -92,6 +94,8 @@ $(function() {
 		<h3>问卷</h3>
 		<div id="final" class="div1" ondrop="drop(event)"
 			ondragover="allowDrop(event)"></div>
+		<div style="text-align: center"><input type="button"
+			value="保存问卷" /><input type="button" value="重置" /></div>
 		</td>
 		<td>
 		<h3>可用模板</h3>
@@ -99,15 +103,10 @@ $(function() {
 			ondragover="allowDrop(event)">
 		<table>
 			<tr>
-				<div id="drag_title" draggable="true" ondragstart="drag(event)">
-				<h2 class="canedit">标题</h2>
-				</div>
-			</tr>
-			<tr>
 				<div id="drag_problem_template1" draggable="true"
 					ondragstart="drag(event)">
 				<p class="canedit">问题</p>
-				<input type="radio" name="group1" value="first" checked="checked" /><span
+				<input type="radio" name="group1" value="first" /><span
 					class="canedit">选项1</span> <input type="radio" name="group1"
 					value="second" /><span class="canedit">选项1</span> <input
 					type="radio" name="group1" value="third" /><span class="canedit">选项1</span>
