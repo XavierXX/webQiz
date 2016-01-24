@@ -1,1 +1,0 @@
-1. put all the project for technical validation here. like drag and drop basic model.
