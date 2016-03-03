@@ -8,6 +8,7 @@ createTables ( $con );
 
 mysql_close ( $con );
 
+// 创建数据库
 function createDataBase($con) {
 	if (mysql_query ( "CREATE DATABASE webqiz", $con )) {
 		echo "Database created";
@@ -16,6 +17,7 @@ function createDataBase($con) {
 	}
 }
 
+// 创建数据库中的表
 function createTables($con) {
 	mysql_query ( "USE webqiz;", $con );
 	if (mysql_query ( "CREATE TABLE `user` (
