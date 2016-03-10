@@ -332,6 +332,7 @@ $(document).ready(function() {
 		contentsCss: ['css/bootstrap-combined.min.css'],
 		allowedContent: true
 	});
+	$.get("bootstrap_layout_files/my_controls/A1.html","utf-8",function(data){ $("#my-sidebar-nav").html(data); }); 
 	$("body").css("min-height", $(window).height() - 90);
 	$(".demo").css("min-height", $(window).height() - 160);
 	$(".sidebar-nav .lyrow").draggable({
