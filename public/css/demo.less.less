@@ -1,0 +1,97 @@
+.main-body {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.left-frame{
+  .set-border-common;
+  padding-left:5px;
+  width:100%;
+  height:1024px;
+}
+
+.right-frame{
+  padding-left: 10px;
+  #changeSize{
+    .set-border-common;
+    margin-bottom: 20px;
+    .btn{
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.ui-draggable-dragging{
+  // 拖放过程中的css配置
+ .view { display:block;}
+ .preview{display: none;}
+}
+
+.draggable-control-frame{
+  .set-border-common;
+  margin-top: 40px; 
+  height:100%;
+  
+
+  .view{
+    display: none;
+  }
+
+  .preview{
+    display: block;
+  }
+
+  .layout{
+    text-align: center;
+  }
+
+  .controls{
+    text-align: center;
+  }
+}
+
+
+.demo{
+  .set-border-common;
+  .view{
+    display: block;
+  }
+
+  .preview{
+    display: none;
+  }
+
+  .row-fluid{
+    .add_frame_and_shadow;
+    .set-border-common;
+    margin: 15px 0;
+    position: relative;
+    padding: 25px  14px 0;
+  }
+}
+
+/* -------------------------------------------------------------------------------------
+** 下面的为公用格式
+** 将css中重复的提取到一起
+** 并未实际在html中使用
+----------------------------------------------------------------------------------------*/
+
+.set-border-common{
+  border:1px solid #DDDDDD;
+  /* 设置边框为圆角 */
+  border-radius: 8px 8px 8px 8px;
+}
+
+.add_frame_and_shadow{
+  /* 给demo中的row-fluid元素添加边框和阴影*/
+  background-color: #F5F5F5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* inset 表示阴影向内，默认为向外 */
+  -webkit-box-shadow: inset 0 1px 13px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 13px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 1px 1px 13px rgba(0, 0, 0, 8.1);
+}
