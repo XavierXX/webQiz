@@ -16,21 +16,18 @@ $(document).ready(function() {
 		$("#height-value").text($("#inputHeight").val());
 		$("#width-value").text($("#inputWidth").val());
 	});
+
+	CONTROL.loadControls("#layout-container",1);
+	CONTROL.loadControls("#controls-container",2);
+
+
+
 });
 
-function Car(model) {
+function configurationElm(e, t) {
+	$(".draggable-control-frame .single-control").draggable({
+		connectToSortable: " .demo, .column",
+		helper: "clone"});
 	
-	this.model = model;
-	this.color = "silver";
-	this.year = "2012";
-
-	this.getInfo = function () {
-		return this.model + " " + this.year;
-	};
-}
-
-function user(car) {
-	var myCar = new Car("ford");
-	myCar.year = "2010";
-	console.log(myCar.getInfo());
+	console.log($(".draggable-control-frame  .single-control"));
 }
