@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>
+      问卷设计界面
+    </title>
+    <!-- bootstrap's css -->
+    <link href="./bootstrap_layout_files/bootstrap/css/bootstrap-combined.min.css"
+    rel="stylesheet" />
+    <link href="./bootstrap_layout_files/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet" />
+    <!-- jquery -->
+    <script type="text/javascript" src="./bootstrap_layout_files/jquery/jquery-2.0.0.min.js">
+    </script>
+    <script type="text/javascript" src="./bootstrap_layout_files/jquery/jquery-ui.js">
+    </script>
+    <script type="text/javascript" src="./bootstrap_layout_files/jquery/jquery.ui.touch-punch.min.js">
+    </script>
+    <script type="text/javascript" src="./bootstrap_layout_files/jquery/jquery.htmlClean.js">
+    </script>
+    <!-- bootstrap's js -->
+    <script type="text/javascript" src="./bootstrap_layout_files/bootstrap/js/bootstrap.min.js">
+    </script>
+    <!--link href="./bootstrap_layout_files/my_layout.css" rel="stylesheet" /--> 
+    <script type="text/javascript" src="./scripts/my_new_scripts.js">
+    </script>
+    <script type="text/javascript" src="./scripts/mange_controls.js">
+    </script>
+    <link href="./css/demo.less.css" rel="stylesheet" /> 
+  </head>
+  
+  <body>
+    <div class="container-fluid main-body">
+      <div class="row-fluid">
+        <div class="span2">
+          <div class="container-fluid left-frame" style="">
+            <div class="row-fluid draggable-control-frame">
+              <div class="layout" id="layout-container">
+                <h2>
+                  layout
+                </h2>
+              </div>
+              <hr />
+              <div class="controls" id="controls-container">
+                <h2>
+                  controls
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="span10 right-frame">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <ul class="nav">
+                <li class="">
+                  <a href="#">
+                    <button class="btn btn-primary">
+                      New
+                    </button>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#">
+                    <button class="btn btn-primary">
+                      Save
+                    </button>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#">
+                    <button class="btn btn-primary">
+                      Open
+                    </button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="changeSize">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#changeSizeModal">
+              Size
+            </button>
+            &nbsp; Height: &nbsp;
+            <span id="height-value">
+              800
+            </span>
+            &nbsp; Width: &nbsp;
+            <span id="width-value">
+              1200
+            </span>
+          </div>
+          <div style="height: 800px;width:1200px" class="demo ui-sortable">
+            <div class="row-fluid clearfix">
+              <div class="span12 column">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal hide fade" role="dialog" id="changeSizeModal">
+      <div class="modal-header">
+        <a class="close">
+          &times;
+        </a>
+        <h3>
+          修改大小
+        </h3>
+      </div>
+      <form class="form-horizontal">
+        <div class="control-group">
+          <label class="control-label" for="inputHeight">
+            height
+          </label>
+          <div class="controls">
+            <input id="inputHeight" type="text" />
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputWidth">
+            width
+          </label>
+          <div class="controls">
+            <input id="inputWidth" type="text" />
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <button class="btn" type="submit" id="change-size-btn" data-dismiss="modal">
+              确定
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+
+</html>
